@@ -1,0 +1,10 @@
+relatorios-prontos/
+
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+*.pbix
+
+/scripts/__pycache__
+/scripts/_stg
+
+.env
