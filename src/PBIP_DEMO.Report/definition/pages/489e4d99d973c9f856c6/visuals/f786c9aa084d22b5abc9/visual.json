@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "f786c9aa084d22b5abc9",
+  "position": {
+    "x": 541.9095477386935,
+    "y": 60.301507537688444,
+    "z": 0,
+    "height": 299.8994974874372,
+    "width": 300.7035175879397
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DimClientes"
+                        }
+                      },
+                      "Property": "ClienteId"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(DimClientes.ClienteId)",
+              "nativeQueryRef": "Contagem de ClienteId"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

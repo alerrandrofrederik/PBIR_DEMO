@@ -1,13 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.2.0/schema.json",
   "themeCollection": {
     "baseTheme": {
-      "name": "CY24SU10",
-      "reportVersionAtImport": "5.63",
+      "name": "Fluent2-CY26SU04",
+      "reportVersionAtImport": {
+        "visual": "2.8.0",
+        "report": "3.2.0",
+        "page": "2.3.1"
+      },
       "type": "SharedResources"
     }
   },
-  "layoutOptimization": "None",
   "objects": {
     "section": [
       {
@@ -25,7 +28,7 @@
     "outspacePane": [
       {
         "properties": {
-          "visible": {
+          "expanded": {
             "expr": {
               "Literal": {
                 "Value": "false"
@@ -42,8 +45,8 @@
       "type": "SharedResources",
       "items": [
         {
-          "name": "CY24SU10",
-          "path": "BaseThemes/CY24SU10.json",
+          "name": "Fluent2-CY26SU04",
+          "path": "BaseThemes/Fluent2-CY26SU04.json",
           "type": "BaseTheme"
         }
       ]
@@ -51,10 +54,10 @@
   ],
   "settings": {
     "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
-    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true
   }
 }

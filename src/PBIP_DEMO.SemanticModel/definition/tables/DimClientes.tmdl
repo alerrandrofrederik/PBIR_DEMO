@@ -1,0 +1,44 @@
+table DimClientes
+	lineageTag: 438b80a2-73cf-4605-8271-89f9f7fbc0ba
+
+	column ClienteId
+		dataType: int64
+		formatString: 0
+		lineageTag: 302be024-4827-4f21-a3f9-e17d98dbc4d6
+		summarizeBy: count
+		sourceColumn: ClienteId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sexo
+		dataType: int64
+		formatString: 0
+		lineageTag: 8cf8eebf-3f3d-43cd-92aa-dae6dba17783
+		summarizeBy: sum
+		sourceColumn: Sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataNascimento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 103dd929-099e-43da-adca-bb797edb8600
+		summarizeBy: none
+		sourceColumn: DataNascimento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition DimClientes = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\alerrandro.santos\Workspace\Projetos\alisson_pezzotti\reactor-pbi-maio-25\dados\DimClientes.csv"),[Delimiter=";", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ClienteId", Int64.Type}, {"Sexo", Int64.Type}, {"DataNascimento", type date}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+
