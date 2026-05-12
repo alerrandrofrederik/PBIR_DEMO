@@ -8,11 +8,13 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["DimClientes"]
+annotation PBI_QueryOrder = ["Sales","Customers","Products"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table DimClientes
+ref table Sales
+ref table Customers
+ref table Products
 
 ref cultureInfo pt-BR
 

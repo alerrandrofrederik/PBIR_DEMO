@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "f786c9aa084d22b5abc9",
+  "name": "56bc8aa0ed3ab20e73a7",
   "position": {
-    "x": 541.9095477386935,
-    "y": 60.301507537688444,
-    "z": 0,
-    "height": 299.8994974874372,
-    "width": 300.7035175879397
+    "x": 389.1457286432161,
+    "y": 160,
+    "z": 1,
+    "height": 300.7035175879397,
+    "width": 299.8994974874372,
+    "tabOrder": 1
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -21,17 +22,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DimClientes"
+                          "Entity": "Sales"
                         }
                       },
-                      "Property": "ClienteId"
+                      "Property": "TotalDue"
                     }
                   },
-                  "Function": 5
+                  "Function": 0
                 }
               },
-              "queryRef": "CountNonNull(DimClientes.ClienteId)",
-              "nativeQueryRef": "Contagem de ClienteId"
+              "queryRef": "Sum(Sales.TotalDue)",
+              "nativeQueryRef": "Soma de TotalDue"
             }
           ]
         }

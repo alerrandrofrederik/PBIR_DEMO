@@ -1,0 +1,264 @@
+table Sales
+	lineageTag: 3778f7ab-8330-4a87-8365-e07fa22b4156
+
+	column SalesOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a248ea3-6ec2-4fff-8551-58f3843921a7
+		summarizeBy: count
+		sourceColumn: SalesOrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderDetailID
+		dataType: int64
+		formatString: 0
+		lineageTag: 41cd18dc-67f7-4c23-9167-2c414ac6d74a
+		summarizeBy: count
+		sourceColumn: SalesOrderDetailID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4909d6aa-1f2c-4c93-99e1-34ce9b8f968c
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: d8090b20-b275-4ac9-bc92-0e3c39cc4a05
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipToAddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: cc032988-dc1a-4e46-a92e-bc9da44b662a
+		summarizeBy: count
+		sourceColumn: ShipToAddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillToAddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: b298696d-99c5-45a2-a8fc-9b118f87781d
+		summarizeBy: count
+		sourceColumn: BillToAddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 615767c2-495d-4b8e-9774-5b9c910336d2
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ShipDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a582ba25-ba60-4e42-93ba-4a7011fd6a9f
+		summarizeBy: none
+		sourceColumn: ShipDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0fbb21c8-9f12-4d31-828d-86966f2a6b0b
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SalesOrderNumber
+		dataType: string
+		lineageTag: fdd82820-f5c4-4b62-bac7-db54238e84a9
+		summarizeBy: none
+		sourceColumn: SalesOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column PurchaseOrderNumber
+		dataType: string
+		lineageTag: 57ccb0a2-a952-4b5c-8f08-4fca56a2c90a
+		summarizeBy: none
+		sourceColumn: PurchaseOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountNumber
+		dataType: string
+		lineageTag: 0520b29f-7c35-423e-84c8-075bc5a482ea
+		summarizeBy: none
+		sourceColumn: AccountNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderQty
+		dataType: int64
+		formatString: 0
+		lineageTag: 926ed79a-29f0-40cc-933e-7ef5e1ba1ec5
+		summarizeBy: sum
+		sourceColumn: OrderQty
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		lineageTag: 0065b464-05db-440d-890f-4826f96d3d05
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitPriceDiscount
+		dataType: double
+		lineageTag: c193b117-9e5e-4812-b402-d04b51afad78
+		summarizeBy: sum
+		sourceColumn: UnitPriceDiscount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LineTotal
+		dataType: double
+		lineageTag: 040cc20e-c91c-4af2-8bc5-566ccb008051
+		summarizeBy: sum
+		sourceColumn: LineTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SubTotal
+		dataType: double
+		lineageTag: f77b3c37-f961-4022-b8c3-c210b99bd588
+		summarizeBy: sum
+		sourceColumn: SubTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxAmt
+		dataType: double
+		lineageTag: a6312915-d9a8-4a89-b60d-2e072492fd5a
+		summarizeBy: sum
+		sourceColumn: TaxAmt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Freight
+		dataType: double
+		lineageTag: 1b8715b8-c530-409c-84db-251c60aff647
+		summarizeBy: sum
+		sourceColumn: Freight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalDue
+		dataType: double
+		lineageTag: 8be529bf-ff30-40ed-92c5-9e1fb7724bd1
+		summarizeBy: sum
+		sourceColumn: TotalDue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SubTotalRateio
+		dataType: double
+		lineageTag: fd6b6b8e-5279-4945-930b-630c76e1b90d
+		summarizeBy: sum
+		sourceColumn: SubTotalRateio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxAmtRateio
+		dataType: double
+		lineageTag: ac0b49ac-e207-4d40-8fd8-3e53550e1bb8
+		summarizeBy: sum
+		sourceColumn: TaxAmtRateio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FreightRateio
+		dataType: double
+		lineageTag: 3461b7c5-6eb3-4531-9392-4096f98f3459
+		summarizeBy: sum
+		sourceColumn: FreightRateio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalDueRateio
+		dataType: double
+		lineageTag: 305928c1-0d69-4720-a121-1586b6a1f41f
+		summarizeBy: sum
+		sourceColumn: TotalDueRateio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 63e5f235-441b-457f-8909-b8ace2c31e5d
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column updateDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 169ac910-4760-4d33-ab19-56a9c49c94cf
+		summarizeBy: none
+		sourceColumn: updateDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Sales = m
+		mode: import
+		source =
+				let
+				    Fonte = Sql.Database("zzks2ncenuketbxdrp2y2soqia-3wkpt3i6n7hujhd65g6kr6eqqy.datawarehouse.fabric.microsoft.com", "lh_silver"),
+				    dbo_Sales = Fonte{[Schema="dbo",Item="Sales"]}[Data]
+				in
+				    dbo_Sales
+

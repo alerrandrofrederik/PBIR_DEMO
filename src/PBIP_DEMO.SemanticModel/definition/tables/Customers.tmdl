@@ -1,0 +1,155 @@
+table Customers
+	lineageTag: b8c29f94-ca05-4219-b6f4-74e05814c996
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: d815bcab-0bea-4038-bbee-ef342874050e
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 0386540d-b624-47a5-8b80-17317b2efbb3
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: d4b9cb3f-e8b1-4b86-978c-3570ade23649
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MiddleName
+		dataType: string
+		lineageTag: 63f89b36-b20b-448a-8f28-ade62899fb79
+		summarizeBy: none
+		sourceColumn: MiddleName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: 62f2ece0-4052-4588-aa29-4126b842a16f
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Suffix
+		dataType: string
+		lineageTag: 891eb3dc-ba87-4630-be95-47d761e9bab5
+		summarizeBy: none
+		sourceColumn: Suffix
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		lineageTag: 08aa0ffa-6ed7-4b71-be3a-1e8a01392f33
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesPerson
+		dataType: string
+		lineageTag: 2d226d0d-7ed7-4be9-b3a7-2372722b3d18
+		summarizeBy: none
+		sourceColumn: SalesPerson
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailAddress
+		dataType: string
+		lineageTag: d46de648-1ca2-4ced-99f4-9af04fda35e6
+		summarizeBy: none
+		sourceColumn: EmailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine1
+		dataType: string
+		lineageTag: 67475194-0799-4f19-9a90-d1bd560a9a23
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine2
+		dataType: string
+		lineageTag: 34c1acda-c617-488f-bcdb-79beb1e970c6
+		summarizeBy: none
+		sourceColumn: AddressLine2
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 1101bfce-e0a0-4829-92a9-39a110d715dd
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvince
+		dataType: string
+		lineageTag: 68b2637e-e360-4ee2-900c-b4b315324726
+		summarizeBy: none
+		sourceColumn: StateProvince
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegion
+		dataType: string
+		lineageTag: 675a2982-ad99-4da4-b6f5-312ff7b75ab5
+		summarizeBy: none
+		sourceColumn: CountryRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		lineageTag: 91b7ee0b-9492-4ea9-a76e-c689f5e8e32d
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5adcad9b-f459-4862-b3d0-8d8a592765dc
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column updateDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 04b4a6fe-af63-40dd-a468-f65be9531552
+		summarizeBy: none
+		sourceColumn: updateDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Customers = m
+		mode: import
+		source =
+				let
+				    Fonte = Sql.Database("zzks2ncenuketbxdrp2y2soqia-3wkpt3i6n7hujhd65g6kr6eqqy.datawarehouse.fabric.microsoft.com", "lh_silver"),
+				    dbo_Customers = Fonte{[Schema="dbo",Item="Customers"]}[Data]
+				in
+				    dbo_Customers
+
